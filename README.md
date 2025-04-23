@@ -34,14 +34,14 @@ Este repositório contém exemplos de código em Python para programar o robô h
 
 3. Execute um exemplo:
     ```bash
-    Execute o arquivo python dentro da pasta Lib do SDK extraido
+    Execute o arquivo python dentro da pasta 'Lib' do SDK extraido
     ```
 
 > ⚠️ Certifique-se de que o robô NAO esteja na mesma rede e que o IP esteja configurado corretamente no script.
 
-## 🧠 Sobre o NAOqi
+## 🧠 Sobre o Robô NAO
 
-A SDK oficial para programar o NAO em Python é o **NAOqi SDK**. Veja mais: [https://developer.softbankrobotics.com/](https://developer.softbankrobotics.com/)
+Veja mais: [https://developer.softbankrobotics.com/](https://developer.softbankrobotics.com/)
 
 ---
 
