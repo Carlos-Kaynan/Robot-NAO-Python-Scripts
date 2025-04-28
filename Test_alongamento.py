@@ -26,6 +26,10 @@ tts.say("Agora olhem para o lado esquerdo.")
 motion.setAngles("HeadYaw", 1.0, 0.2)  # gira cabeça para esquerda
 time.sleep(2)
 
+# Voltar cabeça para frente
+motion.setAngles(["HeadYaw", "HeadPitch"], [0.0, 0.0], 0.2)
+time.sleep(1)
+
 tts.say("Agora olhem para cima.")
 motion.setAngles("HeadPitch", -0.5, 0.2)  # cabeça para cima
 time.sleep(2)
