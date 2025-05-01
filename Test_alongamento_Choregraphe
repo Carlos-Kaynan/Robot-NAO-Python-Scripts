@@ -1,0 +1,68 @@
+
+**Este código você irá colar dentro do blovo "Python Script" dentro da plataforma de programação "Choregraphe" do Robô NAO**
+
+
+
+from naoqi import ALProxy
+import time
+
+def onInput_onStart():
+    # Obter proxies básicos do robô
+    motion = ALProxy("ALMotion", "127.0.0.1", 9559)
+    posture = ALProxy("ALRobotPosture", "127.0.0.1", 9559)
+    tts = ALProxy("ALTextToSpeech", "127.0.0.1", 9559)
+
+    # Acordar o robô
+    motion.wakeUp()
+    posture.goToPosture("StandInit", 0.5)
+
+    # Alongamento do pescoço
+    tts.say("Vamos começar com o alongamento do pescoço.")
+    tts.say("Olhem para o lado direito.")
+    motion.setAngles("HeadYaw", -1.0, 0.2)
+    time.sleep(2)
+
+    tts.say("Agora olhem para o lado esquerdo.")
+    motion.setAngles("HeadYaw", 1.0, 0.2)
+    time.sleep(2)
+
+    tts.say("Agora olhem para cima.")
+    motion.setAngles("HeadPitch", -0.5, 0.2)
+    time.sleep(2)
+
+    motion.setAngles(["HeadYaw", "HeadPitch"], [0.0, 0.0], 0.2)
+    time.sleep(1)
+
+    # Levantar os braços
+    tts.say("Agora levantem os braços comigo.")
+    names = ["LShoulderPitch", "RShoulderPitch"]
+    angles = [-1.0, -1.0]
+    motion.setAngles(names, angles, 0.2)
+    time.sleep(3)
+
+    angles = [1.5, 1.5]
+    motion.setAngles(names, angles, 0.2)
+    time.sleep(2)
+
+    # Agachamento
+    tts.say("Agora vamos agachar três vezes.")
+    for i in range(3):
+        tts.say("Agacha!")
+        motion.setAngles("KneePitch", 1.0, 0.2)
+        time.sleep(1)
+        motion.setAngles("KneePitch", 0.0, 0.2)
+        time.sleep(1)
+
+    # Finalizar
+    tts.say("Muito bem! Terminamos nosso alongamento.")
+    posture.goToPosture("StandInit", 0.5)
+    motion.rest()
+
+    # Sinaliza que terminou
+    onStopped()
+
+def onInput_onStop():
+    # Para movimento e fecha o script
+    motion = ALProxy("ALMotion", "127.0.0.1", 9559)
+    motion.stopMove()
+    onStopped()
