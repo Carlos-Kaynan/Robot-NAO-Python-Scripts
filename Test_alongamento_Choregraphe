@@ -1,7 +1,17 @@
 
  # Este código você irá colar dentro do bloco "Python Script" dentro da plataforma de programação "Choregraphe" do Robô NAO. caso não queira utiliar algum programa para rodar o Python
 
+🔧 Instruções:
+ No Choregraphe, arraste um bloco "Python Script" para o workspace.
 
+ Dê dois cliques no bloco.
+
+ Apague qualquer código que estiver lá e cole o script acima.
+
+ Conecte a entrada onStart a algum evento ou botão de início no seu projeto.
+
+ Clique em play para testar com o robô ou em simulação.
+ 
 
 from naoqi import ALProxy
 import time
