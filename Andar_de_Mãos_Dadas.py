@@ -2,7 +2,8 @@
 
 ''' Este exemplo mostra como guiar NAO pela mão, enquanto calcula seus 
     movimentos apenas com passos, usando a biblioteca ALMath. O recorte de passos é 
-    descrito em almath_foot_clip.py. ''' 
+    descrito em almath_foot_clip.py. 
+    http://doc.aldebaran.com/1-14/dev/python/examples/almath/index.html#using-almath-with-almotion ''' 
 
 import  sys 
 import  time 
