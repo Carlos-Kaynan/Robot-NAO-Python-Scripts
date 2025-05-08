@@ -5,6 +5,18 @@
     descrito em almath_foot_clip.py. 
     http://doc.aldebaran.com/1-14/dev/python/examples/almath/index.html#using-almath-with-almotion ''' 
 
+'''
+O exemplo a seguir permite que você guie o NAO pelo braço. 
+Ele gera passos de acordo com a posição do braço esquerdo e, em seguida, os corta para garantir que sejam possíveis para o NAO.
+
+Para usar o exemplo, execute o script fornecendo o IP do seu NAO como argumento. 
+O NAO se levantará. Quando estiver pronto, segure o braço esquerdo do NAO e pressione o sensor tátil frontal. 
+Agora você pode guiar o NAO inclinando o braço para frente e para trás e fazê-lo girar girando o pulso esquerdo. 
+Os olhos do NAO ficarão verdes quando a posição do braço indicar um alvo e azuis quando a posição do braço for neutra. 
+Para finalizar o exemplo, pressione o sensor tátil traseiro: o NAO se agachará e removerá sua rigidez.
+
+'''
+
 import  sys 
 import  time 
 import  math 
@@ -152,7 +164,7 @@ def  main ( robotIP ):
   motionProxy . rest () 
 
 
-if  __nome__  ==  "__principal__" : 
+if  __name__  ==  "__principal__" : 
   if  ( len( sys . argv )  <  2 ): 
     print  ("Uso python almath_robot_guide.py robotIP")
     sys . exit ( 1 ) 
