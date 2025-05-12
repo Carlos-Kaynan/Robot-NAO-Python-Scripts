@@ -1,87 +1,92 @@
 # -*- encoding: UTF-8 -*- 
 
-''' Example showing how to use almath with python and send the results to
-    the robot by using a proxy to ALMotion '''
+''' 
+Exemplo que mostra como usar o ALMath com Python e enviar os resultados
+para o robô usando um proxy para o ALMotion.
+'''
 
 import sys
 import time
 
 from naoqi import ALProxy
-
 import almath
 
-
 def main(IP):
-    PORT = 9559
+    PORT = 9559  # Porta padrão para se comunicar com o NAO
 
-    # Create a proxy to ALMotion.
+    # Cria um proxy para o módulo ALMotion (movimentação do robô)
     try:
         motionProxy = ALProxy("ALMotion", IP, PORT)
-    except Exception,e:
-        print ("Could not create proxy to ALMotion")
-        print ("Error was: ",e)
+    except Exception as e:
+        print("Não foi possível criar o proxy para ALMotion")
+        print("O erro foi:", e)
 
-    chainName = "RArm"
-    space = 1
-    useSensors = True
+    chainName = "RArm"     # Nome da cadeia de articulações a ser controlada (braço direito)
+    space = 1              # Espaço de referência (1 = espaço do mundo, World)
+    useSensors = True      # Utiliza os sensores para obter a posição real
 
-    # Set stiffness on.
+    # Liga a rigidez do corpo inteiro, permitindo movimento
     motionProxy.stiffnessInterpolation("Body", 1.0, 0.5)
 
-    # Stand up.
+    # Coloca o robô em pé e prepara os motores
     motionProxy.moveInit()
 
-   
-    # Retrieve a transform matrix using ALMotion #
-   
+    # ---------------------------------------------------------
+    # Recupera a matriz de transformação usando o ALMotion
+    # ---------------------------------------------------------
 
-    # Retrieve current transform from ALMotion.
-    # Convert it to a transform matrix for ALMath.
+    # Recupera a transformação atual do braço direito no espaço do mundo
+    # e converte para uma matriz de transformação do ALMath
     origTransform = almath.Transform(
         motionProxy.getTransform(chainName, space, useSensors))
 
-    # Visualize the transform using overriden print from ALMath
-    print ("Original transform")
-    print (origTransform)
+    # Mostra a matriz original no terminal
+    print("Transformação original")
+    print(origTransform)
 
-    ##########################################################
-    # Use almath to do some computations on transform matrix #
-    ##########################################################
+    # ---------------------------------------------------------
+    # Usa o ALMath para fazer cálculos com a matriz de transformação
+    # ---------------------------------------------------------
 
-    # Compute a transform corresponding to the desired move
-    # (here, move the chain for 5cm along the Z axis and the X axis).
+    # Cria uma nova transformação de movimento: 5cm para frente (eixo X) e 5cm para cima (eixo Z)
     moveTransform = almath.Transform.fromPosition(0.05, 0.0, 0.05)
 
-    # Compute the corresponding target transform.
+    # Calcula a nova matriz de destino aplicando o movimento à transformação original
     targetTransform = moveTransform * origTransform
 
-    # Visualize it.
-    print ("Target transform")
-    print (targetTransform)
+    # Mostra a matriz de destino no terminal
+    print("Transformação alvo")
+    print(targetTransform)
 
-    ##############################################
-    # Send a transform to the robot via ALMotion #
-    ##############################################
+    # ---------------------------------------------------------
+    # Envia a transformação de destino para o robô via ALMotion
+    # ---------------------------------------------------------
 
-    # Convert it to a tuple.
+    # Converte a matriz de transformação para uma lista (formato exigido pelo ALMotion)
     targetTransformList = list(targetTransform.toVector())
 
-    # Send the target transform to NAO through ALMotion.
-    fractionOfMaxSpeed = 0.5
-    axisMask = almath.AXIS_MASK_VEL # Translation X, Y, Z
-    motionProxy.setTransform(
-        chainName,
-        space,
-        targetTransformList,
-        fractionOfMaxSpeed,
-        axisMask)
+    # Envia a transformação desejada para o braço direito do NAO
+    fractionOfMaxSpeed = 0.5  # Velocidade de movimento (50% da máxima)
+    axisMask = almath.AXIS_MASK_VEL  # Máscara de eixos para permitir movimento linear (X, Y, Z)
 
+    motionProxy.setTransform(
+        chainName,          # Cadeia de articulações (braço direito)
+        space,              # Espaço de referência (World)
+        targetTransformList,# Nova transformação a ser aplicada
+        fractionOfMaxSpeed, # Fração da velocidade máxima
+        axisMask            # Máscara para definir os eixos ativos
+    )
+
+    # Espera 2 segundos para observar o movimento
     time.sleep(2.0)
 
 
+# Verifica se o IP do robô foi fornecido como argumento ao script
 if __name__ == "__main__":
-    if (len(sys.argv)<2):
-        print ("Usage python almath_transform.py robotIP")
+    if (len(sys.argv) < 2):
+        print("Uso: python almath_transform.py robotIP")
         sys.exit(1)
 
+    # Executa a função principal com o IP fornecido
     main(sys.argv[1])
+
