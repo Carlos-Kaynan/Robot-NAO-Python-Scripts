@@ -1,6 +1,7 @@
 from naoqi import ALProxy
 import time
 
+#:)
 # IP e porta do seu robô
 ip = "192.168.1.10"  # troque pelo IP do seu NAO
 port = 9559
