@@ -1,0 +1,75 @@
+'''
+🎯 Como usar no Choregraphe:
+Abra o Choregraphe.
+
+Arraste um bloco "Python Script" para o seu workspace.
+
+Clique duas vezes nele para editar.
+
+Apague o código existente e cole esse código acima.
+
+Conecte a entrada onStart a algum evento (como um botão ou "start behavior").
+
+Teste com o NAO conectado ou no modo simulação!
+'''
+
+
+
+
+
+
+from naoqi import ALProxy
+import random
+import time
+
+def onInput_onStart():
+    # Conecta aos proxies do NAO
+    tts = ALProxy("ALTextToSpeech", "127.0.0.1", 9559)
+    motion = ALProxy("ALMotion", "127.0.0.1", 9559)
+
+    # Desperta o robô
+    motion.wakeUp()
+
+    # Lista de perguntas e respostas
+    perguntas = [
+        {"pergunta": "Quanto é três mais quatro?", "resposta": "sete"},
+        {"pergunta": "Quanto é cinco menos dois?", "resposta": "três"},
+        {"pergunta": "Quanto é dois vezes três?", "resposta": "seis"},
+        {"pergunta": "Quanto é oito dividido por dois?", "resposta": "quatro"},
+        {"pergunta": "Quanto é dez menos sete?", "resposta": "três"}
+    ]
+
+    # Escolhe uma pergunta aleatória
+    q = random.choice(perguntas)
+
+    # Fala com o aluno
+    tts.say("Olá! Vamos aprender matemática!")
+    tts.say("Preste atenção!")
+    tts.say(q["pergunta"])
+
+    # Simula resposta do aluno (mude isso futuramente para fala real ou botão)
+    time.sleep(3)
+    resposta_aluno = q["resposta"]  # <- Aqui você pode trocar por uma resposta errada para testar
+
+    if resposta_aluno.lower() == q["resposta"]:
+        tts.say("Muito bem! Você acertou!")
+        # Comemora balançando a cabeça
+        for i in range(2):
+            motion.setAngles("HeadYaw", 1.0, 0.3)
+            time.sleep(0.5)
+            motion.setAngles("HeadYaw", -1.0, 0.3)
+            time.sleep(0.5)
+        motion.setAngles("HeadYaw", 0.0, 0.3)
+    else:
+        tts.say("Hmm... quase! A resposta certa é " + q["resposta"] + ".")
+
+    tts.say("Vamos tentar de novo mais tarde. Até logo!")
+    motion.rest()
+
+    # Finaliza o bloco
+    onStopped()
+
+def onInput_onStop():
+    motion = ALProxy("ALMotion", "127.0.0.1", 9559)
+    motion.rest()
+    onStopped()
