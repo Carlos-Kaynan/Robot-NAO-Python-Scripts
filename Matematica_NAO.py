@@ -78,3 +78,18 @@ if resposta_aluno.lower() == q["resposta"]:
     motion.setAngles("HeadYaw", 0.0, 0.3)
 else:
     tts.say("Hmm... quase! A resposta certa é " + q["resposta"] + ".")
+
+
+'''
+🚀 Possíveis extensões:
+🎨 Integração com painel gráfico no computador ou tablet.
+
+🎤 Adição de reconhecimento de fala real.
+
+🧠 Níveis de dificuldade adaptativos.
+
+📊 Coleta de dados sobre desempenho dos alunos.
+
+🧩 Gamificação (pontuação, fases, etc.).
+
+'''
