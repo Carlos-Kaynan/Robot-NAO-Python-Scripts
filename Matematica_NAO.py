@@ -1,3 +1,46 @@
+'''
+🤖💡 Projeto: “NAO, o Professor de Matemática Interativo”
+🎯 Objetivo:
+Ensinar e testar conceitos básicos de matemática (adição, subtração, multiplicação, divisão) de forma interativa com fala, gestos e reconhecimento de resposta por voz ou botões.
+
+📚 Público-alvo:
+Alunos do ensino fundamental (ou alfabetizados).
+
+Pode ser adaptado para alunos com dificuldades de aprendizagem.
+
+🧠 Conceito:
+O robô faz perguntas de matemática em voz alta, por exemplo:
+
+“Quanto é 3 + 4?”
+
+Ele então oferece opções:
+
+“A: cinco. B: sete. C: nove.”
+
+O aluno pode responder de forma verbal ou apertando botões (em interface externa ou virtual). O NAO então:
+
+Confirma se a resposta está correta.
+
+Reage com alegria se o aluno acertar (dança, comemoração).
+
+Dá dicas ou reforça a explicação se errar.
+
+🛠️ Funcionalidades técnicas:
+Uso de ALTextToSpeech para perguntas/respostas.
+
+Expressões faciais e corporais simples com ALMotion.
+
+Aleatoriedade nas perguntas com Python.
+
+Reconhecimento de fala simples (com ALSpeechRecognition) ou simulação por botões.
+
+Pode evoluir para reconhecimento facial e personalização para cada aluno.
+
+
+
+'''
+
+
 
 from naoqi import ALProxy
 import random
