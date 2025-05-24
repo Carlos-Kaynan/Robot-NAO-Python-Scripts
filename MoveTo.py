@@ -36,3 +36,8 @@ fala.say("Cheguei ao meu destino")
 
 # Relaxar o robo
 movimento.rest()
+
+
+
+""" Depois tentar testar controlar o andar do NAO com as setas do computador """
+
