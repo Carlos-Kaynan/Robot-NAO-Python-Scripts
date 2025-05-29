@@ -2,6 +2,18 @@
 
 '''Instale as bibliotecas pynput e naoqi'''
 
+"""
+Controles:
+  ↑ / w : frente
+  ↓ / s : trás
+  ← / a : gira esquerda
+  → / d : gira direita
+  q : andar para a esquerda
+  e : andar para a direita
+  + : aumentar velocidade
+  - : reduzir velocidade
+  ESC: parar e sair
+"""
 
 
 from pynput import keyboard
