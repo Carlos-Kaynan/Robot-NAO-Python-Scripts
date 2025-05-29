@@ -16,6 +16,16 @@ Controles:
 """
 
 
+'''✅ O que esse código permite?
+Movimentação contínua enquanto segura a tecla.
+
+Controle lateral (strafing) com q (esquerda) e e (direita).
+
+Velocidade dinâmica com + e -.
+
+Interface intuitiva estilo game (WSAD + setas).
+'''
+
 from pynput import keyboard
 from naoqi import ALProxy
 import sys
