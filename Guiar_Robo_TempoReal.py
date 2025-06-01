@@ -34,6 +34,19 @@ import sys
 ROBOT_IP = "192.168.1.100"  # Substitua pelo IP do seu robô
 PORT = 9559
 
+print("""
+Controles:
+  ↑ / w : frente
+  ↓ / s : trás
+  ← / a : gira esquerda
+  → / d : gira direita
+  q : andar para a esquerda
+  e : andar para a direita
+  + : aumentar velocidade
+  - : reduzir velocidade
+  ESC: parar e sair
+""")
+
 # Conecta com o robô
 try:
     motionProxy = ALProxy("ALMotion", ROBOT_IP, PORT)
@@ -114,18 +127,7 @@ def on_release(key):
         return False  # Sai do listener
 
 # Inicia escuta de teclado
-print("""
-Controles:
-  ↑ / w : frente
-  ↓ / s : trás
-  ← / a : gira esquerda
-  → / d : gira direita
-  q : andar para a esquerda
-  e : andar para a direita
-  + : aumentar velocidade
-  - : reduzir velocidade
-  ESC: parar e sair
-""")
+
 
 with keyboard.Listener(on_press=on_press, on_release=on_release) as listener:
     listener.join()
