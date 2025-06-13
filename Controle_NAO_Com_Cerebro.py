@@ -7,7 +7,7 @@ O NAO precisa estar em uma superfície estável com espaço para andar.
 Certifique-se de que o OpenViBE esteja transmitindo dados via LSL corretamente.
 '''
 
-
+#Baixar a biblioteca NAOQI / SDK Python
 import time
 import threading
 from pylsl import StreamInlet, resolve_byprop
