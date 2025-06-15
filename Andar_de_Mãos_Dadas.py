@@ -2,6 +2,7 @@
 
 
 '''
+use python 2.7
 http://doc.aldebaran.com/1-14/dev/python/examples/almath/index.html#using-almath-with-almotion 
 
 Este exemplo mostra como guiar o robô NAO usando seu braço esquerdo.
