@@ -1,7 +1,20 @@
+
+
+'''
+🔧 Requisitos:
+Python rodando no robô ou remotamente com o NAOqi SDK instalado.
+
+Microfone funcionando.
+
+O idioma do robô deve estar configurado para Português (ou você pode mudar para "English" e adaptar as palavras).
+
+IP correto do robô no campo NAO_IP.
+
+'''
+
+
 from naoqi import ALProxy
 import time
-
-
 
 
 # Endereço IP e porta do robô
