@@ -1,3 +1,5 @@
+# -*- codificação: UTF-8 -*- 
+
 '''
 🤖💡 Projeto: “NAO, o Professor de Matemática Interativo”
 🎯 Objetivo:
