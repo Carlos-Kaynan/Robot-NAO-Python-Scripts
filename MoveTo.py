@@ -1,4 +1,6 @@
-# -*- coding: utf-8 -*-
+# -*- codificação: UTF-8 -*- 
+
+#Python 2.7
 
 from naoqi import ALProxy
 import time
