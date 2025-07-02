@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*
+
+#Python 2.7
+
 '''
 Observações:
 Troque robot_ip = "192.168.1.100" pelo IP real do seu robô.
