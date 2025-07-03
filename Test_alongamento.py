@@ -1,3 +1,5 @@
+# -*- codificação: UTF-8 -*- 
+
 from naoqi import ALProxy
 import time
 
