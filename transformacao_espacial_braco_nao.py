@@ -1,6 +1,7 @@
 # -*- encoding: UTF-8 -*- 
 
-''' 
+'''
+use Python 2.7
 Exemplo que mostra como usar o ALMath com Python e enviar os resultados
 para o robô usando um proxy para o ALMotion.
 '''
