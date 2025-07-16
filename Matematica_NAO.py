@@ -1,5 +1,5 @@
 # -*- codificação: UTF-8 -*- 
-
+#use Python 2.7 🫵🏽
 '''
 🤖💡 Projeto: “NAO, o Professor de Matemática Interativo”
 🎯 Objetivo:
