@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*
 
-#Python 2.7
+#use Python 2.7
 
 '''
 Observações:
