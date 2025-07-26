@@ -2,6 +2,7 @@
 
 '''
 🔧 Requisitos:
+usar Python 2.7
 Python rodando no robô ou remotamente com o NAOqi SDK instalado.
 
 Microfone funcionando.
