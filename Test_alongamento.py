@@ -1,4 +1,5 @@
 # -*- codificação: UTF-8 -*- 
+#use python 2.7
 
 from naoqi import ALProxy
 import time
