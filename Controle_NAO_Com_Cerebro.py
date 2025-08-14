@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*
 
 #use Python 2.7
+#Baixe os SDK pyNAOQI
 
 '''
 Observações:
