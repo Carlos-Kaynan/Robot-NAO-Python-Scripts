@@ -3,6 +3,7 @@
 
 '''
 use python 2.7
+Baixe os SDK pyNAOQI
 http://doc.aldebaran.com/1-14/dev/python/examples/almath/index.html#using-almath-with-almotion 
 
 Este exemplo mostra como guiar o robô NAO usando seu braço esquerdo.
@@ -191,3 +192,4 @@ if __name__ == "__main__":
 
     # Executa o programa principal com o IP do robô
     main(sys.argv[1])
+
