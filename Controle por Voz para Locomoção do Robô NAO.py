@@ -3,6 +3,7 @@
 '''
 🔧 Requisitos:
 usar Python 2.7
+Baixe os SDK pyNAOQI
 Python rodando no robô ou remotamente com o NAOqi SDK instalado.
 
 Microfone funcionando.
@@ -77,3 +78,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
