@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-#Instale as bibliotecas pynput e naoqi
+#Instale as bibliotecas pynput, pynaoqi e naoqi
 #Use Python 2.7
 
 """
