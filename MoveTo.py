@@ -1,6 +1,7 @@
 # -*- codificação: UTF-8 -*- 
 
 # Use Python 2.7
+# instalar o SDK NaoQi
 
 from naoqi import ALProxy
 import time
@@ -42,4 +43,5 @@ movimento.rest()
 
 
 """ Depois tentar testar controlar o andar do NAO com as setas do computador """
+
 
