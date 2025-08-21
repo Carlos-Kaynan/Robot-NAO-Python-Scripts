@@ -1,5 +1,6 @@
 # -*- codificação: UTF-8 -*- 
 #use python 2.7
+#intale o SDK naoQi
 
 from naoqi import ALProxy
 import time
@@ -90,3 +91,4 @@ O NAO precisa estar com motion enabled (ou seja, com motores ligados).
 
 
 '''
+
