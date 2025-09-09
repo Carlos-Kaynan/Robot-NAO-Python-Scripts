@@ -2,6 +2,7 @@
 
 #Instale as bibliotecas pynput, pynaoqi e naoqi
 #Use Python 2.7
+#baixe o SDK
 
 """
 Controles:
