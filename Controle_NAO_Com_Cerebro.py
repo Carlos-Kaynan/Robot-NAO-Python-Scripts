@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*
 
 #use Python 2.7
-#Baixe os SDK pyNAOQI
+#Baixe os SDK pyNAOQI ou crie o arquivo dentro da biblioteca do Choregraphe
 
 '''
 Observações:
