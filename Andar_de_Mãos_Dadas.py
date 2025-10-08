@@ -17,6 +17,8 @@ Agora você pode guiar o NAO inclinando o braço para frente e para trás e faz�
 Os olhos do NAO ficarão verdes quando a posição do braço indicar um alvo e azuis quando a posição do braço for neutra. 
 Para finalizar o exemplo, pressione o sensor tátil traseiro: o NAO se agachará e removerá sua rigidez.
 
+sempre fique perto do robô para o caso dele cair
+
 '''
 
 import sys
@@ -193,5 +195,6 @@ if __name__ == "__main__":
 
     # Executa o programa principal com o IP do robô
     main(sys.argv[1])
+
 
 
