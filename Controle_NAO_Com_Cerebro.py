@@ -2,6 +2,7 @@
 
 #use Python 2.7
 #Baixe os SDK pyNAOQI ou crie o arquivo dentro da biblioteca do Choregraphe
+#Use o Openvibe para captar os sinais cerebrais
 
 '''
 Observações:
