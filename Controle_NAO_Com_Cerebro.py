@@ -10,7 +10,7 @@ Troque robot_ip = "192.168.1.100" pelo IP real do seu robô.
 
 O NAO precisa estar em uma superfície estável com espaço para andar.
 
-Certifique-se de que o OpenViBE esteja transmitindo dados via LSL corretamente.
+Certifique-se de que o OpenViBE esteja transmitindo dados via LSL corretamente os sinais.
 '''
 
 #Baixar a biblioteca NAOQI / SDK Python
