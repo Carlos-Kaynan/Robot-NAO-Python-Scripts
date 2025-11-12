@@ -1,5 +1,5 @@
 # -*- codificação: UTF-8 -*- 
-
+import naoqi
 
 '''
 by cetec
@@ -195,6 +195,7 @@ if __name__ == "__main__":
 
     # Executa o programa principal com o IP do robô
     main(sys.argv[1])
+
 
 
 
