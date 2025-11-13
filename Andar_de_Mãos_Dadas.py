@@ -1,6 +1,6 @@
 # -*- codificação: UTF-8 -*- 
 import naoqi
-
+import ALProxy 
 '''
 by cetec
 use python 2.7
@@ -195,6 +195,7 @@ if __name__ == "__main__":
 
     # Executa o programa principal com o IP do robô
     main(sys.argv[1])
+
 
 
 
