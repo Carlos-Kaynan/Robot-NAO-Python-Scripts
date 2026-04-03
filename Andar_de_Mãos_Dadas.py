@@ -3,7 +3,7 @@ import naoqi
 import ALProxy 
 '''
 by cetec
-use python 2.7
+use python 2.7 apenas
 Baixe os SDK pyNAOQI
 http://doc.aldebaran.com/1-14/dev/python/examples/almath/index.html#using-almath-with-almotion 
 
