@@ -1,6 +1,6 @@
 # -*- codificação: UTF-8 -*- 
 
-# Use apenas Python 2.7
+# Use apenas Python 2.7 para uso das biblioteca 
 # instalar o SDK NaoQi
 
 from naoqi import ALProxy
