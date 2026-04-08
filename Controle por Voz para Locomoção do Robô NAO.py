@@ -2,7 +2,7 @@
 
 '''
 🔧 Requisitos:
-usar Python 2.7
+usar Python 2.7 apenas 
 Baixe os SDK pyNAOQI
 Python rodando no robô ou remotamente com o NAOqi SDK instalado.
 
