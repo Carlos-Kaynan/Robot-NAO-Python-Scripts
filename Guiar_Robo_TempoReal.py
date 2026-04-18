@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 #Instale as bibliotecas pynput, pynaoqi e naoqi
-#Use Python 2.7 apenas 
+#Use Python 2.7 apenas only
 #baixe o SDK
 
 """
