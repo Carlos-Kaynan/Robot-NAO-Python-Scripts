@@ -2,7 +2,7 @@
 
 #Instale as bibliotecas pynput, pynaoqi e naoqi
 #Use Python 2.7 apenas only só apenas somente one
-#baixe o SDK obrigatoriamente por obséquio 
+#baixe o SDK obrigatoriamente por obséquio se for possível 
 
 """
 Controles:
