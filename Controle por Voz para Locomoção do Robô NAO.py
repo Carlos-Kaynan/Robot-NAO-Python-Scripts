@@ -3,7 +3,7 @@
 '''
 🔧 Requisitos:
 usar Python 2.7 apenas somente 
-Baixe os SDK pyNAOQI
+Baixe os SDK pyNAOQI para o código rodar no robô 
 Python rodando no robô ou remotamente com o NAOqi SDK instalado.
 
 Microfone funcionando.
