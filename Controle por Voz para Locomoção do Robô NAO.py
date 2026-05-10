@@ -10,7 +10,7 @@ Microfone funcionando.
 
 O idioma do robô deve estar configurado para Português (ou você pode mudar para "English" e adaptar as palavras).
 
-IP correto do robô no campo NAO_IP.
+IP correto do robô no campo NAO_IP, clicando no peito do robô, ele falará se está ma rede e seu IP
 
 '''
 
