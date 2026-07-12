@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*
 
 '''
-🔧 Requisitos obrigatórios!!!!!!!
+🔧 Requisitos obrigatórios!!!!!!!!
 usar Python 2.7 apenas somentee
 Baixe os SDK pyNAOQI para o código rodar no robô 
 Python rodando no robô ou remotamente com o NAOqi SDK instalado.
